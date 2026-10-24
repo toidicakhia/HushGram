@@ -4,6 +4,12 @@ Every HushGram release, newest first.
 
 ## Unreleased
 
+## 0.0.15.1 (2026-10-24)
+
+### Improvements
+
+* **Instagram:** Morphe now knows the armeabi-v7a build of 452.1.0.53.64, `385811005`, so 32-bit phones patch without the unsupported-version warning. The patches themselves are unchanged from 0.0.15. This fork adds the armv7 version code to the version metadata.
+
 ## 0.0.15 (2026-10-22)
 
 ### Features

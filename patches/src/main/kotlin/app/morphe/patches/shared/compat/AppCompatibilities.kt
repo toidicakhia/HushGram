@@ -44,6 +44,12 @@ internal object AppCompatibilities {
      */
     const val INSTAGRAM_TARGET_VERSION_CODE = 385811006
 
+    /**
+     * The version code of the armeabi-v7a build of [INSTAGRAM_TARGET_VERSION]: APKMirror's
+     * (armeabi-v7a) bundle of that release, for older 32-bit phones.
+     */
+    const val INSTAGRAM_ARMV7_VERSION_CODE = 385811005
+
     /** Instagram's own floor, Android 9. */
     const val INSTAGRAM_TARGET_MIN_SDK = 28
 
@@ -57,7 +63,10 @@ internal object AppCompatibilities {
             targets = listOf(
                 AppTarget(
                     version = INSTAGRAM_TARGET_VERSION,
-                    versionCodes = mapOf(SupportedAbi.ARM64_V8A to INSTAGRAM_TARGET_VERSION_CODE),
+                    versionCodes = mapOf(
+                        SupportedAbi.ARM64_V8A to INSTAGRAM_TARGET_VERSION_CODE,
+                        SupportedAbi.ARMEABI_V7A to INSTAGRAM_ARMV7_VERSION_CODE,
+                    ),
                     minSdk = INSTAGRAM_TARGET_MIN_SDK,
                 ),
             ),

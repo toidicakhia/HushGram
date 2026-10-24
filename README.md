@@ -1,7 +1,7 @@
 ![HushGram. Keep the moments. Cut the noise.](assets/readme-hero.png)
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-0.0.15-E1306C" alt="Version 0.0.15">
+  <img src="https://img.shields.io/badge/version-0.0.15.1-E1306C" alt="Version 0.0.15.1">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-GPL--3.0-blue" alt="License GPL-3.0"></a>
   <img src="https://img.shields.io/badge/platform-Android%209%2B-3DDC84" alt="Platform Android 9+">
   <img src="https://img.shields.io/badge/Instagram-452.1.0.53.64-E1306C" alt="Instagram 452.1.0.53.64">
@@ -34,7 +34,7 @@ This project has no connection to Meta or to the Morphe project. Neither endorse
 
 1. Install [Morphe Manager](https://github.com/MorpheApp/morphe-manager) 2.0.0 or newer.
 2. Add HushGram as a patch source by opening [this link](https://morphe.software/add-source?github=SysAdminDoc%2FHushGram) on your phone. Or in Manager open **Sources**, tap **+**, choose **Remote** and enter `github.com/SysAdminDoc/HushGram`. Use HushGram as your only Instagram source, since mixing in another one can stop patching.
-3. Get Instagram 452.1.0.53.64 from APKMirror. Take [the bundle labelled (arm64-v8a) (480-640dpi) (Android 9.0+), build 385811006](https://www.apkmirror.com/apk/instagram/instagram-instagram/instagram-452-1-0-53-64-release/). The version's other builds work too (see [Supported Instagram builds](#supported-instagram-builds)).
+3. Get Instagram 452.1.0.53.64 from APKMirror. Take [the bundle labelled (arm64-v8a) (480-640dpi) (Android 9.0+), build 385811006](https://www.apkmirror.com/apk/instagram/instagram-instagram/instagram-452-1-0-53-64-release/), or the armeabi-v7a build 385811005 on a 32-bit phone. The version's other builds work too (see [Supported Instagram builds](#supported-instagram-builds)).
 4. Uninstall the Instagram you got from the Play Store. The patched app is signed with your own key, so Android won't install it over Meta's. Uninstalling signs you out, so have your password and two-factor codes ready. On a rooted phone, Manager's Root Mount can lay HushGram over the Play Store app instead, and you stay signed in.
 5. In Morphe Manager, pick the Instagram file, keep the default patch selection or change it, and patch.
 6. Open HushGram settings and turn on what you want. It's at the top of Instagram's Settings and activity. A long press on the Instagram logo at the top of your feed opens it too.
@@ -226,7 +226,7 @@ If Instagram crashes within a minute of starting three times in a row, HushGram 
 - **Can't find the settings.** Long-press Instagram's home screen icon and tap **HushGram settings**. If there's no way in at all, refresh the source in Manager and patch again.
 - **Switches do nothing.** Refreshing a source only downloads patches. The switches live inside the patched app, so patch and install again. Some switches need Instagram restarted, and their description says so.
 - **Package conflict or App not installed.** Android won't replace an app with one signed by a different key. Update with the key the installed build used, or uninstall the differently signed app first. That deletes its data, so make sure you can sign in again.
-- **Unsupported Version.** Manager can only be told one build per kind of phone, so it says this for every 452.1.0.53.64 build except 385811006. The other builds in [Supported Instagram builds](#supported-instagram-builds) patch the same way. Any other version may work, but nobody has checked it.
+- **Unsupported Version.** Manager can only be told one build per kind of phone, so it says this for every 452.1.0.53.64 build except 385811006 on 64-bit phones and 385811005 on 32-bit phones. The other builds in [Supported Instagram builds](#supported-instagram-builds) patch the same way. Any other version may work, but nobody has checked it.
 - **Patching stops on one patch.** Check that you're patching a supported build, and if several patch sources are enabled, try HushGram alone. If it still stops, open an issue naming the patch, your Manager version and the error.
 - **Instagram won't stay open long enough to reach settings.** Create an empty file named `hushgram-safe-mode` in `Android/data/com.instagram.android/files` (a computer or a file manager can reach it). HushGram starts paused until you delete it.
 - **The Play Store keeps offering an Instagram update.** Open Instagram's page in the Play Store, tap the three dots at the top right and untick **Enable auto update**. **Change version code** stops the offers for good on a standard install, but read its warning in [Patches](#patches) first.
@@ -252,8 +252,8 @@ For something that's broken, use the [bug form](https://github.com/SysAdminDoc/H
 | --- | --- |
 | Package | `com.instagram.android` |
 | Version | `452.1.0.53.64` |
-| arm64-v8a builds | `385811006` (the one Manager is told about) |
-| armeabi-v7a builds | `385811005`, for older 32-bit phones |
+| arm64-v8a builds | `385811006` (the one Manager picks on 64-bit phones) |
+| armeabi-v7a builds | `385811005` (the one Manager picks on 32-bit phones) |
 | x86 and x86_64 builds | `385811007` (x86) and `385811008` (x86_64), for emulators and Intel phones |
 | Minimum Android version | Android 9 (API 28) for arm64-v8a and x86_64, Android 8 (API 26) for armeabi-v7a and x86 |
 | Where to get it | [APKMirror](https://www.apkmirror.com/apk/instagram/instagram-instagram/) |
